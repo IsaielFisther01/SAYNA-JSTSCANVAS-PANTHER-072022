@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/CSS/enigme-style.css">
+    <title>SAYNA / ENIGME BLACK PANTHER</title>
+    <meta name="author" content="Isaiel Fisther">
+</head>
+
+<body>
+    <header id="header" class="container header">
+        <div class="logo-header-container">
+            <a href="./index.html"><img src="./Assets/Images/Illustration + Logo/icon_SAYNA.png" alt="logo SAYNA"
+                    class="violet"></a>
+            <a href="./index.html"><img src="./Assets/Images/Illustration + Logo/icon_x.png" alt="logo x" class="violet"></a>
+            <a href="./index.html"><img src="./Assets/Images/Illustration + Logo/icon_MARVEL.png" alt="logo MARVEL"
+                    class="violet"></a>
+        </div>
+        <nav class="main-nav-container">
+            <ul>
+                <li><a href="./index.html" class="btnAccueil ">ACCUEIL</a></li>
+                <li><a href="./wakanda.html" id="btnWakanda" class="btnWkanda ">WAKANDA</a></li>
+                <li><a href="./enigme.html" id="btnEnigme" class="btnEnigme">ENIGME</a></li>
+            </ul>
+        </nav>
+        <!-- navigation scroll -->
+        <div class="socialnetworks">
+            <div class="ligne1"></div>
+            <div class="ligne2">
+                <div class="Logo-socialnetworks">
+                    <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img
+                            src="./Assets/Images/Illustration + Logo/icon_facebook.png" alt="icone fb" class="blanc"></a>
+                    <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img
+                            src="./Assets/Images/Illustration + Logo/icon_instagram.png" alt="icone instagram"
+                            class="blanc"></a>
+                    <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img
+                            src="./Assets/Images/Illustration + Logo/icon_twitter.png" alt="icone twitter" class="blanc"></a>
+                    <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img
+                            src="./Assets/Images/Illustration + Logo/icon_tik_tok.png" alt="icon tiktok" class="blanc"></a>
+
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <main>
+
+        <!-- section defi enigme -->
+        <section class="defi cacheContent">
+            <div>
+                <h1 class="zoom">Releve le defi des dora milaje</h1>
+                <div class="paragraphe">
+                    <p>
+                        Les Dora Milaje sont de farouches guerrières d’élite. Elles constituent la garde
+                        rapprochée du Roi en personne et ont de nombreuses occasions de lui sauver la
+                        vie. Leur Générale, Okoyé est également la dirigeante des forces armées et des
+                        renseignements wakandais.</p>
+                    <p>
+                        La réussite de cette évaluation ne dépend pas de la chance mais bel et bien de
+                        l’entrainement que tu as suivi jusqu’ici ainsi que de ta détermination. Relève ce défi
+                        et montre-nous que tu es capable de porter les valeurs du Black Panther et du
+                        Wakanda !
+                    </p>
+                    <div class="souris-container"><img src="./Assets/Images/Illustration + Logo/logo_souris_BP1_blanc.png"
+                            alt="logo souris"></div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- section questionnaire enigme -->
+        <section class="enigme">
+            <div class="flex-container">
+                <div class="contenant">
+                    <div class="container-sujet cacheContent">
+                        <h2>ENIGME NUMERO I<span class="compteur"></span></h2>
+                        <p class="para">Prouve ton talent d’espion et déchiffre cette réplique d’Okoyé écrite en
+                            Wakandais, et
+                            apprend par la même occasion la première valeur d’une Dora Milaje !</p>
+                        <q class="quote">" SI JE SUIS FIDELE C’EST A CE TRONE
+                            PEU IMPORTE QUI MONTE DESSUS "
+                        </q>
+                        <p class="para"></p>
+                    </div>
+                    <div class="formulaire">
+                        <form action="" class="caheContent">
+                            <label for="reponse">Alors, as tu la réponse ?</label>
+                            <div>
+                                <textarea name="" id="reponse" placeholder="réponse" cols="30"></textarea>
+                                <span class="validator"></span>
+                                <button type="submit" id="btnConfirm" value="envoyer">ENVOYER</button>
+                            </div>
+
+                        </form>
+
+                        <!-- partie popup -->
+                        <div class="overlay">
+                            <div class=" overlay-transparent">
+                                <div class="popup" id="popup-quiz">
+                                    <h2 class="popup-titre"></h2>
+                                    <p class="popup-text"></p>
+                                    <button type="submit" class="btn-popup" id="btn-popup">QUESTION SUIVANTE</button>
+                                    <div class="minuter-container">
+                                        <div class="figma"><img src="" alt=""></div>
+                                        <p class="minuter"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <aside>
+                    <div class="aside-element cacheContent">
+                        <div class="transcrip-aside">
+                            <p>Voici la transicription de l’alphabet :</p>
+                            <p>A = <span class="wakanda_font">a</span> ; B = <span class="wakanda_font">b</span> ; c =
+                                <span class="wakanda_font">c</span> ; d
+                                = <span class="wakanda_font">d</span> ; e = <span class="wakanda_font">e</span> ; f =
+                                <span class="wakanda_font">f</span> ; g
+                                = <span class="wakanda_font">g</span> ; h = <span class="wakanda_font">h</span> ; i =
+                                <span class="wakanda_font">i</span> ; j
+                                = <span class="wakanda_font">j</span> ;
+                            </p>
+                            <p>k = <span class="wakanda_font">k</span> ; l = <span class="wakanda_font">l</span> ; m =
+                                <span class="wakanda_font">m</span> ; n
+                                = <span class="wakanda_font">n</span> ; o = <span class="wakanda_font">o</span> ; p =
+                                <span class="wakanda_font">p</span> ; q
+                                = <span class="wakanda_font">q</span> ; r = <span class="wakanda_font">r</span> ; s =
+                                <span class="wakanda_font">s</span> ; t = <span class="wakanda_font">t</span> ;
+                            </p>
+                            <p>u = <span class="wakanda_font">u</span> ; w = <span class="wakanda_font">w</span> ; x =
+                                <span class="wakanda_font">x</span> ; y
+                                = <span class="wakanda_font">y</span> ; z = <span class="wakanda_font">y</span>
+                            </p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+
+
+
+        </section>
+
+    </main>
+    <footer>
+        <div class="logo-foot-container">
+            <div>
+                <div class="bulle">
+                    <a href=#entete><img src="./Assets/Images/Illustration + Logo/Group 2052.png" alt="bulle"></a>
+                </div>
+                <div class="logoSaynaMarvel">
+                    <a href="#entete"><img src="./Assets/Images/Illustration + Logo/icon_SAYNA.png" alt="logo SAYNA"></a>
+                    <a href="#entete"><img src="./Assets/Images/Illustration + Logo/icon_x.png" alt="logo x"></a>
+                    <a href="#entete"><img src="./Assets/Images/Illustration + Logo/icon_MARVEL.png" alt="logo MARVEL"></a>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <div class="container-text">
+            <div class="about">
+                <h2>PAGES</h2>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./wakanda.html">Wakanda</a></li>
+                    <li><a href="#entete">Enigme</a></li>
+                </ul>
+            </div>
+            <div class="social">
+                <h2>RETROUVER NOUS</h2>
+                <div>
+                    <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img
+                            class="marge" src="./Assets/Images/Illustration + Logo/icon_facebook_footer.png" alt="icone fb"></a>
+                    <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img
+                            class="marge" src="./Assets/Images/Illustration + Logo/icon_instagram_footer.png" alt="icone ig"></a>
+                    <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img
+                            class="marge" src="./Assets/Images/Illustration + Logo/icon_twitter_footer.png" alt="icone tw"></a>
+                    <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img
+                            src="./Assets/Images/Illustration + Logo/icon_ti_tok_footer.png" alt="icone tiktok"></a>
+
+                </div>
+            </div>
+            <div class="text-foot">
+                <p>2022 Tous droits réservés <span class="point"></span> Politique de confidentialité <span
+                        class="point"></span> Conditions d utilisation</p>
+            </div>
+        </div>
+
+    </footer>
+    <script src="./srcipts/scriptAnimation.js"></script>
+    <script src="./srcipts/enigme.js"></script>
+</body>
+
+</html>

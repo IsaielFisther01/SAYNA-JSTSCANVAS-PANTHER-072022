@@ -1,0 +1,157 @@
+@import 'accueil-style.css' layer(global-form);
+
+
+/* bouton nav principale */
+#btnWakanda {
+    background-color: var(--dark-purple);
+    border-radius: 2px;
+}
+
+
+/* section wakanda forever */
+
+section.wakanda {
+    background: url('../Images/Illustration + Logo/2_Wakanda_page/Pantherwakanda1.png') no-repeat;
+    background-size: 100%;
+    /* height: 800px; */
+    /* j'utilise le viewport width pour faire du hauteur proporionnelle à la taille de la largeur d'ecran */
+    height: 50vw;
+}
+
+.wakanda .forever {
+    width: 38%;
+    position: relative;
+    top: 35%;
+    left: 14%;
+
+}
+
+/* definition typo propre */
+.wakanda div h1 {
+    font-family: 'Beyno', sans-serif;
+    font-size: calc(2rem + 1.5vw);
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+}
+
+.wakanda div h2 {
+    font-family: 'Wakanda Forever';
+    letter-spacing: 5px;
+    margin: 15px 0;
+}
+
+.wakanda div p {
+    width: 70%;
+    margin-top: 35px;
+}
+
+/* fond panther */
+.fond-panther {
+    position: absolute;
+    opacity: 0.2;
+}
+
+/* section univers de Black Panther */
+/* separatin en deux colonne */
+
+section.panther-univers {
+    /* padding: 100px 0; */
+    position: relative;
+    padding: 8vw 0;
+    column-count: 2;
+    column-gap: 100px;
+
+}
+
+.panther-univers p {
+    margin-bottom: 25px;
+}
+
+.panther-univers h2 {
+    margin-bottom: 40px;
+}
+
+/* debut deuxieme colonne */
+
+/* marge inferieure plus grande */
+.panther-univers .origine p:nth-of-type(3), .panther-univers .guerre p:nth-of-type(2) {
+    margin-bottom: 45px;
+}
+
+/* partie citation */
+
+
+/* video */
+.panther-univers .video {
+    margin: 20px;
+    max-width: 100%;
+}
+
+/* image */
+.panther-univers .illustration img {
+    display: block;
+    margin: 0 auto;
+    padding-top: 20px;
+    max-width: 90%;
+}
+
+/* media querries */
+
+@media screen and (max-width:1000px) {
+    section.panther-univers {
+        column-gap: 60px;
+        width: 95%;
+    }
+
+    .panther-univers .video {
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width:836px) {
+    .wakanda .forever {
+        width: 45%;
+        top: 25%;
+        left: 12%;
+    }
+
+    .wakanda div p {
+        margin-top: 15px;
+    }
+
+    .panther-univers .video {
+        display: block;
+        margin: 20px auto;
+    }
+
+    section.panther-univers {
+        column-count: initial;
+        width: 75%;
+    }
+}
+
+@media screen and (max-width:584px) {
+    .wakanda .forever {
+        width: 70%;
+        left: 5%;
+    }
+
+    .wakanda div h1 {
+        font-size: calc(1rem + 1.5vw);
+        margin-bottom: 10px;
+    }
+
+    .wakanda div h2 {
+        margin: 10px 0;
+    }
+
+    .wakanda div p {
+        width: 100%;
+    }
+
+    .panther-univers .video {
+        max-width: 70%;
+        height: 70%;
+    }
+
+}

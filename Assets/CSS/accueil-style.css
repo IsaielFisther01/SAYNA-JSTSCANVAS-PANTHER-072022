@@ -1,0 +1,979 @@
+/* --------------DEFINITION DES REGLES DE BASE POUR TOUTE LES PAGES--------- */
+@font-face {
+    font-family: 'Wakanda Forever';
+    src: url(../Font/WakandaForever-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Panthera';
+    src: url(../Font/PantheraRegular-MVZ9J.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Beyno';
+    src: url(../Font/BEYNO\ \(1\).otf),
+        url(../Font/BEYNO\ \(1\).ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Cantarell';
+    src: url(../Font/Cantarell-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Cantarell';
+    src: url(../Font/Cantarell-Bold.ttf);
+    font-weight: bold;
+}
+
+/* ---COULEUR --- */
+:root {
+    --white-color: #ffffff;
+    --light-purple: #F2CEF2;
+    --medium-purple: #9E91B7;
+    --move-purple: #DF99F2;
+    --dark-purple: #3D2DA6;
+    --blue-color: #07338C;
+    --dark-blue: #021740;
+    --body-bg-color: linear-gradient(267deg, rgba(17, 33, 63, 1) 0%, rgba(11, 11, 11, 1)40%, rgba(2, 23, 64, 0.8)95%, rgba(2, 23, 64, 0)100%), black;
+    --footer-bg-color: linear-gradient(to bottom, rgba(61, 45, 166, 1)0%, rgba(2, 23, 64, 1)30%);
+    --overlay-popup-color: linear-gradient(to bottom, rgb(61, 45, 166, 1) 0%, rgb(2, 23, 64, 1) 100%);
+    --popup-color: linear-gradient(to bottom, rgb(158, 145, 183) 0%, rgba(61, 45, 166, 0.1) 80%);
+
+}
+
+/* ---------------- */
+
+/* definition global des marges et du comportement des boites */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    color: var(--white-color);
+    /* max-width: 1600px; */
+    width: 100%;
+    font-size: 10px;
+}
+
+body {
+    background: var(--body-bg-color);
+    padding-top: 20px;
+}
+
+/* Tipographie global */
+li {
+    font-family: 'Beyno', sans-serif;
+    font-size: calc(0.8rem + 0.6vw);
+    font-weight: normal;
+    color: var(--white-color);
+}
+
+ul li {
+    list-style-type: none;
+
+}
+
+ul a:link, ul a:visited, ul a:focus {
+    padding: 3px;
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+
+ul a:hover {
+    border-bottom: var(--white-color) 2px solid;
+    padding-bottom: 3px;
+}
+
+
+h1 {
+    font-family: 'Panthera', sans-serif;
+    font-size: calc(2.5rem + 2vw);
+    font-weight: normal;
+    color: var(--medium-purple);
+
+}
+
+h2 {
+    font-family: 'Beyno', sans-serif;
+    font-size: calc(1rem + 1vw);
+    font-weight: normal;
+    color: var(--medium-purple);
+}
+
+p, span.plus {
+    font-family: 'Cantarell', serif;
+    font-size: calc(0.5rem + 0.5vw);
+    color: var(--white-color);
+    line-height: 1.5;
+    font-weight: normal;
+    text-align: justify;
+}
+
+blockquote, cite {
+    font-family: 'Cantarell', serif;
+    font-size: calc(0.5rem + 0.4vw);
+    color: var(--white-color);
+    line-height: 1.5;
+    font-weight: normal;
+    text-align: justify;
+    font-style: normal;
+}
+
+div.text-historique {
+    width: 80%;
+    margin: 20px;
+}
+
+span.plus {
+    border-bottom: solid var(--white-color) 1px;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* transition vers animation avec scroll */
+.personnage {
+    transform: translate(-50px);
+    opacity: 0;
+}
+
+.reveleContent {
+    transform: translate(0);
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+}
+
+/* changement de couleur violet de sayna x marvel entete */
+.logo-header-container .violet:hover {
+    filter: invert(22%) sepia(58%) saturate(2921%) hue-rotate(238deg) brightness(76%) contrast(102%);
+}
+
+.socialnetworks .Logo-socialnetworks .blanc:hover {
+    filter: invert(22%) sepia(58%) saturate(0%) hue-rotate(238deg) brightness(100%) contrast(1000%);
+}
+
+/* definition de la classe container pour definir 80% de la largeur de la page */
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* partie header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.main-nav-container {
+    width: 30%;
+}
+
+.header .main-nav-container ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* partie footer */
+/* definition de footer en flex */
+
+
+footer {
+    background: var(--footer-bg-color);
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 120px 0 50px 0;
+
+
+}
+
+/* coneneur de logo */
+
+/* positionnement logo de gauche */
+
+footer .logo-foot-container {
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    padding-right: 50px;
+    left: 100px;
+    z-index: 3;
+
+}
+
+footer .logo-foot-container .logoSaynaMarvel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -50%;
+}
+
+footer .logo-foot-container .bulle {
+    max-width: 250px;
+}
+
+
+/* definition de grid area */
+footer .container-text {
+    z-index: 10;
+    flex: 1.2;
+    display: grid;
+    grid-template-areas: 'page social social'
+        'foot foot foot';
+}
+
+footer .about {
+    grid-area: page;
+}
+
+footer .social {
+    grid-area: social;
+}
+
+footer .social .marge {
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+footer .text-foot {
+    grid-area: foot;
+}
+
+/* modification du style global de li */
+footer li, footer p {
+    font-size: calc(0.5rem + 0.5vw);
+    padding-top: 5px;
+}
+
+footer ul {
+    margin-top: 10px;
+}
+
+footer li, footer h2, footer p {
+    font-family: "Cantarell", sans-serif;
+    color: var(--light-purple);
+
+}
+
+footer h2 {
+    padding: 5px 0 10px 5px;
+    font-size: calc(0.8rem + 0.6vw);
+    letter-spacing: 4px;
+}
+
+/* zoom logo social fotter */
+.container-text .social img:hover {
+    transform: scale(1.1);
+
+}
+
+/* zoom sur Sayna x et marvel */
+
+.logo-foot-container>div:hover {
+    transform: scale(1.1);
+}
+
+/* -------------- FIN DE LA DEFINITION DES REGLES DE BASE POUR TOUTE LES PAGES--------- */
+
+
+footer .point {
+    width: 5px;
+    height: 5px;
+    background-color: var(--light-purple);
+    border-radius: 5px;
+    display: inline-block;
+    margin: 0.5px;
+
+}
+
+/* definition de style propre à index */
+
+
+/*--------------ANIMATION AVEC CANVAS------------ */
+#myCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+section.blackPanther>div {
+    position: relative;
+    z-index: 4;
+}
+
+
+/* ---------------FIN CANVAS----------------------- */
+#btnAccueil {
+    background-color: var(--dark-purple);
+    border-radius: 2px;
+}
+
+/* navigation fixed */
+.socialnetworks {
+    position: fixed;
+    top: 0px;
+    left: 40px;
+    z-index: 1;
+}
+
+/* animation du scroll */
+@keyframes scroll1 {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 420px;
+    }
+}
+
+@keyframes scroll2 {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 250px;
+    }
+}
+
+.socialnetworks .Logo-socialnetworks {
+    position: relative;
+    top: 265px;
+    left: -10px;
+    display: block;
+}
+
+
+
+.socialnetworks .ligne1 {
+    width: 5px;
+    height: 420px;
+    background-color: var(--medium-purple);
+    display: inline-block;
+    position: absolute;
+    animation: scroll1 5s linear;
+}
+
+.socialnetworks .ligne2 {
+    width: 5px;
+    height: 250px;
+    background-color: var(--medium-purple);
+    position: absolute;
+    left: 20px;
+    top: 0px;
+    animation: scroll2 2.9s linear;
+}
+
+.socialnetworks .Logo-socialnetworks img {
+    max-width: initial;
+}
+
+/* postitionnement des logos */
+
+.socialnetworks .Logo-socialnetworks img:nth-of-type(1), .menu-scroll .conteneur-logo img:nth-of-type(2), .menu-scroll .conteneur-logo img:nth-of-type(3) {
+    margin-bottom: 20px;
+}
+
+/* section Black Panther  */
+section.blackPanther {
+    margin-top: 20px;
+    width: 100%;
+    height: 45vw;
+    background-image: url('../Images/Illustration + Logo/1_Landing_page/Pantherhome1..png') no-repeat;
+    background-size: 65%;
+    background-position-x: right;
+}
+
+.blackPanther>div {
+    width: 30%;
+    position: relative;
+    top: 25%;
+    left: 10%;
+
+}
+
+.blackPanther div h1 {
+    margin-bottom: 10px;
+}
+
+.blackPanther div h2 {
+    margin-bottom: 30px;
+}
+
+.blackPanther div p {
+    width: 80%;
+}
+
+#blackPanther-plus {
+    cursor: pointer;
+}
+
+
+/* section personnage */
+
+.perso .perso-container {
+    width: 92%;
+    height: auto;
+    background-color: var(--dark-blue);
+    display: flex;
+    position: relative;
+    left: 8%;
+
+}
+
+/* alternative de flex */
+/* zoom 20% en hover */
+.photo:hover {
+    transform: scale(1.2);
+}
+
+/* class pour animation carrousel */
+.fade {
+    animation: fade-in 0.5s ease-in-out;
+}
+
+/* keyframe animation carrousel */
+@keyframes fade-in {
+    from {
+        transform: translate(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-400px);
+        opacity: 0;
+
+    }
+
+}
+
+.perso-container div {
+    flex: 1;
+}
+
+.perso-container .item2, .perso-container .item4 {
+    flex-grow: 1.4;
+    padding: 2% 3%;
+
+
+}
+
+.perso-container h2 {
+    margin-bottom: 15px;
+}
+
+.perso-container .item1, .perso-container .item3, .perso-container .item5 {
+    display: flex;
+    align-items: stretch;
+}
+
+
+/* mise en place de la fleche de la carouselle */
+
+.perso-container .item5 {
+    position: relative;
+}
+
+.perso-container .chevron {
+    /* border: 1px solid gold; */
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: var(--dark-blue);
+    padding: 10px 15px;
+    margin-right: 5px;
+    border-radius: 40px;
+    box-shadow: var(--white-color) 0px 0px 20px;
+    cursor: pointer;
+}
+
+.perso-container .chevron>img {
+    /* border: 1px solid gold; */
+    width: 10px;
+
+
+}
+
+/* section historique */
+
+section.Story {
+    margin-top: 5vw;
+    /* rajout de grid */
+    display: grid;
+    grid-template-areas: "ensemble carte"
+        "histoire2 poster";
+
+}
+
+.Story .ensemble {
+    grid-area: ensemble;
+}
+
+.Story .carte-Panther {
+    grid-area: carte;
+}
+
+.Story .hero {
+    grid-area: histoire2;
+}
+
+.Story .poster-Panther {
+    grid-area: poster;
+    padding-top: 60px;
+}
+
+.Story .bloc-historique {
+    margin-top: 20px;
+    margin-left: 60px;
+    margin-bottom: 10px;
+}
+
+/* bordure de la carte */
+
+.Story .carte-Panther .bordure-carte {
+    background-color: var(--white-color);
+    width: 80%;
+    margin-top: 250px;
+    border-radius: 10px;
+    padding-bottom: 80px;
+
+}
+
+/* definition des typo propre  */
+.Story .carte-Panther .bordure-carte p, .historique .carte-Panther .bordure-carte h2, .historique .carte-Panther .bordure-carte li {
+    color: var(--dark-blue);
+    font-family: 'Carantall', sans-serif;
+}
+
+.Story .carte-Panther .bordure-carte p {
+    margin-bottom: 5px;
+}
+
+.Story .carte-Panther .bordure-carte h2 {
+    font-size: calc(1rem + 0.8vw);
+    text-align: center;
+    margin: 10px 0 0 0;
+}
+
+.Story .carte-Panther .bordure-carte ul {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.Story .carte-Panther .descr {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.Story .carte-Panther .bordure-carte li {
+    font-size: calc(0.5rem + 0.5vw);
+    background-color: var(--dark-purple);
+    color: var(--light-purple);
+    margin: 10px 0;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+/* position et taille image Panther */
+.Story .carte-Panther .bordure-carte img {
+    margin-top: -50%;
+    margin-left: 5%;
+    width: 90%;
+}
+
+.Story p {
+    margin-bottom: 20px;
+}
+
+.Story h2 {
+    margin: 40px 20px 20px 20px;
+}
+
+
+
+/* section nous contacter */
+section.contacter * {
+    display: block;
+}
+
+section.contacter {
+    background: url(../illustrations+Logo/Accueil/Pantherhome7.png) no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 10px;
+}
+
+/* mise en forme de la box du formulaire */
+.contacter .form-contact {
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 20%, rgba(255, 255, 255, 0)100%);
+    border-radius: 150px;
+    width: 50%;
+    min-height: 200px;
+    margin: 100px auto;
+    padding: 40px 0;
+}
+
+/* definition typo propre */
+.contacter h2 {
+    font-family: 'Cantarell', sans-serif;
+    font-size: calc(1.5rem + 1vw);
+
+}
+
+.contacter h2, .contacter p {
+    text-align: center;
+    margin: 0 auto;
+    color: var(--dark-blue);
+}
+
+/* definition de radius et centrage avec marge */
+.contacter div {
+    width: 50%;
+    margin: 20px auto;
+}
+
+.contacter input, .contacter textarea, .contacter button {
+    background-color: var(--light-purple);
+    border-radius: 20px;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+}
+
+.contacter input {
+    height: 2.5vw;
+}
+
+.contacter textarea {
+    height: 12vw;
+}
+
+/* suppression de la couleur de fond champ */
+.contacter input, .contacter textarea {
+    background-color: transparent;
+    border: var(--dark-blue) solid 1px;
+}
+
+/* placeholder */
+::placeholder {
+    color: var(--dark-blue);
+    font-size: calc(0.6rem + 0.5vw);
+    padding-left: 10px;
+}
+
+.contacter textarea {
+    resize: none;
+}
+
+/*validator  */
+.contacter .validator {
+    color: red;
+    font-style: italic;
+    padding-top: 10px;
+    font-family: "Cantarell", sans-serif;
+}
+
+/* largeur boutton envoyer */
+.contacter button {
+    width: fit-content;
+    margin: 0 auto;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--dark-blue);
+    font-size: calc(0.6rem + 0.5vw);
+}
+
+.contacter button:hover {
+    box-shadow: var(--dark-blue) 1px 1px 20px;
+}
+
+/* popup */
+/* enfant de overlay */
+.contacter .overlay-transparent {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+}
+
+.contacter .overlay {
+    background: var(--overlay-popup-color);
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90vh;
+    display: none;
+    z-index: 12;
+
+}
+
+.contacter .popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    height: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background: var(--popup-color);
+    box-shadow: 0 3.45px 3.45px rgba(0, 0, 0, 0.04);
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    margin: 0;
+}
+
+.contacter .popup p {
+    color: var(--white-color);
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: calc(1rem + 1vw);
+}
+
+
+
+.contacter .popup img {
+    width: 20%;
+}
+
+/* fond avant footer */
+div.fond {
+    width: 100%;
+    height: 150px;
+}
+
+/* --------- NOUVELLES FEATURES-------- */
+.zoom:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* Media query */
+
+
+@media screen and (max-width:1137px) {
+    .menu-scroll {
+        transform: scale(0.9);
+    }
+
+    .perso-container .item2, .perso-container .item4 {
+        padding: 10px 10px;
+    }
+
+    .contacter .form-contact {
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width:1000px) {
+    footer {
+        padding: 20px 0;
+    }
+
+    footer .logo-foot-container {
+        padding-right: 0;
+        left: 0;
+    }
+}
+
+@media screen and (max-width:923px) {
+    .menu-scroll {
+        left: 30px;
+        transform: scale(0.8);
+    }
+
+    .perso-container .item2, .perso-container .item4 {
+        padding: 2px 5px;
+    }
+
+    div.fond {
+        height: 40px;
+    }
+}
+
+@media screen and (max-width:909px) {
+    .blackPanther>div {
+        top: 20%;
+        left: 14%;
+    }
+
+}
+
+@media screen and (max-width:840px) {
+    .entete {
+        width: 80%;
+    }
+
+    .menu-scroll {
+        transform: scale(0.7);
+    }
+
+    .blackPanther>div {
+        top: 23%;
+        left: 14%;
+    }
+
+    .blackPanther div h1 {
+        margin-bottom: 5px;
+    }
+
+    .blackPanther div h2 {
+        margin-bottom: 15px;
+    }
+
+
+    .perso .perso-container {
+        flex-direction: column;
+        border-radius: 20px;
+        left: 0;
+    }
+
+    .perso-container .item1, .perso-container .item3, .perso-container .item5 {
+        position: static;
+        padding: 5px;
+        width: 40%;
+    }
+
+
+    .perso-container .item2, .perso-container .item4 {
+        width: 70%;
+    }
+
+    .perso-container .item2 {
+        margin-left: 0;
+    }
+
+    .perso .perso-container {
+        width: 60vw;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    section.Story {
+        width: 100%;
+    }
+
+    .Story .carte-Panther .bordure-carte {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:741px) {
+    .perso .perso-container {
+        margin-top: 10%;
+    }
+
+    .menu-scroll {
+        transform: scale(0.6);
+    }
+
+    section.blackPanther {
+        height: 70vw;
+        background-position-x: center;
+    }
+
+    .blackPanther>div {
+        width: 60%;
+        top: 40vw;
+        left: 0;
+        margin: 0 auto;
+    }
+
+    section.historique {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Story .carte-Panther .bordure-carte {
+        width: 40%;
+        margin: 0 auto;
+        margin-top: 130px;
+    }
+
+    .Story .poster-Panther {
+        display: inline-block;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .contacter .form-contact {
+        width: 70%;
+    }
+
+}
+
+@media screen and (max-width:645px) {
+    .Story .carte-Panther .bordure-carte li {
+        padding: 5px 5px;
+    }
+
+    .Story .carte-Panther .bordure-carte {
+
+        padding-bottom: 20px;
+
+    }
+
+}
+
+
+
+@media screen and (max-width:532px) {
+    .entete {
+        width: 70%;
+    }
+
+    section.blackPanther {
+        height: 85vw;
+    }
+
+    .blackPanther>div {
+        text-align: center;
+    }
+
+    .blackPanther div p {
+        width: 100%;
+    }
+
+    .contacter .form-contact {
+        width: 80%;
+
+    }
+}
+
+@media screen and (max-width:453px) {
+    .entete {
+        width: 50%;
+    }
+
+}

@@ -1,0 +1,429 @@
+@import 'accueil-style.css' layer(global-form);
+
+
+/* bouton nav principale */
+#btnEnigme {
+    background-color: var(--dark-purple);
+    border-radius: 2px;
+}
+
+/* .defi * {
+    border: solid 1px gold;
+} */
+
+/* section defi enigme */
+section.defi {
+    background: url('../Images/Illustration + Logo/3_Page_Enigme/Pantherenigme1.png') no-repeat;
+    background-size: 65%;
+    width: 95%;
+    height: 700px;
+}
+
+.defi>div {
+    width: 50%;
+    height: 540px;
+    position: relative;
+    top: 20%;
+    left: 50%;
+
+}
+
+.defi h1 {
+    font-family: 'Beyno', sans-serif;
+    letter-spacing: 3px;
+    font-size: calc(2.7rem + 1.5vw);
+    text-align: justify;
+    margin-right: 22%;
+    margin-left: 10%;
+}
+
+.defi .paragraphe {
+    background: url('../Images/Illustration + Logo/3_Page_Enigme/Pantherenigme2.png') no-repeat;
+    background-size: 105%;
+    height: 500px;
+    padding-top: 26%;
+    padding-left: 16%;
+}
+
+.defi .paragraphe p {
+    width: 63%;
+}
+
+.defi .souris-container {
+    width: 60%;
+    /* min-width: 50px; */
+}
+
+.defi img {
+    max-width: 40px;
+    min-width: 20px;
+    display: block;
+    margin-top: 5px;
+    margin-left: 35%;
+}
+
+/* section questionnaire enigme */
+
+
+section.enigme {
+    margin: 100px 0;
+    width: 85%;
+    position: relative;
+    left: 15%;
+}
+
+.enigme .sujet {
+    width: 55%;
+    margin: 30px 0;
+
+}
+
+/* enigme à resoudre */
+section.enigme q {
+    font-size: calc(0.8rem + 1.2vw);
+    color: var(--medium-purple);
+    font-weight: normal;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    line-height: 1.5;
+    font-family: 'Wakanda Forever', sans-serif;
+}
+
+/* suppression des crpchet d'origine */
+section.enigme .container-sujet q::before, section.enigme .container-sujet q::after {
+    content: none;
+}
+
+/* disposition flex */
+.flex-container {
+    display: flex;
+
+}
+
+
+/* conteneur formulaire et container-sujet */
+.enigme .contenant {
+    flex: 1;
+}
+
+.enigme .container-sujet {
+    margin: 30px 0;
+
+}
+
+.enigme .container-sujet span {
+    font-family: 'Cantarell', sans-serif;
+}
+
+.enigme .container-sujet h2 {
+    text-decoration: underline;
+}
+
+.enigme .container-sujet p {
+    margin: 10px 0;
+}
+
+.enigme .contenant .formulaire {
+    margin: 0 0 30px 0;
+    padding-top: 2vw;
+}
+
+/* rendre les element de form en bloc */
+.contenant .formulaire * {
+    display: block;
+    font-family: 'Carantall', sans-serif;
+    font-size: calc(0.5rem + 0.5vw);
+}
+
+/* div champ de reponse et bouton envoyer */
+.contenant .formulaire form>div {
+    margin-top: 10px;
+    width: 85%;
+}
+
+/* champ de reponse */
+.enigme .formulaire textarea {
+    outline: none;
+    resize: none;
+    width: 100%;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-left: 10px;
+    border: solid 2px;
+    color: var(--medium-purple);
+    background-color: transparent;
+}
+
+.enigme .formulaire textarea::placeholder {
+    color: var(--medium-purple)
+}
+
+/* bouton envoyer */
+.enigme .formulaire button {
+    background-color: var(--light-purple);
+    color: var(--dark-blue);
+    padding: 10px 30px;
+    border: var(--light-purple) solid 1px;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-top: 3vw;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.enigme .formulaire button:hover {
+    box-shadow: var(--light-purple) 2px 2px 10px;
+}
+
+/* popup */
+
+.formulaire .overlay {
+    position: fixed;
+    width: 90%;
+    height: 90vh;
+    top: 5%;
+    left: 5vh;
+    background: var(--overlay-popup-color);
+    z-index: 12;
+    display: none;
+}
+
+.formulaire .overlay-transparent {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+}
+
+.formulaire #popup-quiz {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    height: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background: var(--popup-color);
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    z-index: 10;
+}
+
+
+.formulaire #popup-quiz p {
+    letter-spacing: 1.5px;
+    font-size: calc(0.7rem + 0.7vw);
+
+}
+
+.formulaire #popup-quiz h2 {
+    font-size: calc(1rem + 1vw);
+    color: var(--white-color);
+}
+
+
+.formulaire #btn-popup {
+    margin: 0px;
+
+}
+
+/* -------------PARTIE MINUTER ET FIGMA------------ */
+#popup-quiz .minuter-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#popup-quiz .minuter-container p {
+    margin-left: 15px;
+    font-size: calc(0.6rem + .6vw);
+    font-weight: bold;
+}
+
+#popup-quiz .minuter-container span {
+    font-size: calc(1rem + 1vw);
+    font-weight: bold;
+}
+
+/* --------------------FIN-------------------------- */
+
+/* conteneur aside */
+.enigme aside {
+    flex: 1.9;
+    background: url('../Images/Illustration + Logo/3_Page_Enigme/Pantherenigme2.png') no-repeat;
+    background-position-x: 30%;
+    background-size: 70%;
+
+}
+
+.enigme aside h3 {
+    font-family: 'Cantarell', sans-serif;
+    font-size: calc(0.5rem + 0.5vw);
+    /* margin-bottom: 30px; */
+    margin-bottom: 7%;
+    text-align: center;
+
+}
+
+/* -------PARTIE FLEXIBLE----------- */
+.enigme aside p {
+    text-align: center;
+}
+
+/* ------A VIRER APARTIR DE QUESTION 2 */
+.enigme aside .transcrip-aside .wakanda_font {
+    font-family: 'Wakanda Forever', sans-serif;
+}
+
+.enigme aside .transcrip-aside {
+    padding-top: 20px;
+    padding-left: 40px;
+}
+
+.enigme aside .transcrip-aside p {
+    text-align: justify;
+}
+
+/* --------------------------------------- */
+/* ------------------------------------ */
+
+.enigme aside .aside-element {
+    width: 50%;
+    position: relative;
+    /* top: 30%; */
+    /* valeur qui diminue en fonction de la largeur de la page */
+    top: 6vw;
+    left: 20%;
+}
+
+/* validation de reponse */
+.validator {
+    color: red;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+/* media querries */
+
+@media screen and (max-width:1530px) {
+    .defi h1 {
+        text-align: left;
+    }
+
+}
+
+@media screen and (max-width:1000px) {
+    section.defi {
+        margin: 0 auto;
+        background-position: center 0;
+        height: 100vw;
+    }
+
+    .defi>div {
+        width: 80%;
+        margin: 0 auto;
+        height: auto;
+        position: relative;
+        left: 0;
+        top: 40vw;
+    }
+
+    .defi h1 {
+        margin: 0 100px;
+        text-align: center;
+        font-size: calc(2rem + 1.5vw);
+    }
+
+    .defi .paragraphe {
+        background-position: center 0, 50px 40vw;
+        height: 45vw;
+    }
+
+    section.enigme {
+        width: 95%;
+        margin: 0 auto;
+        left: 0;
+    }
+
+    .enigme .sujet {
+        width: 75%;
+    }
+
+    .enigme aside {
+        background-size: 90%;
+    }
+
+    .enigme aside .aside-element {
+        top: 10vw;
+        width: 60%;
+        left: 15%;
+    }
+
+}
+
+@media screen and (max-width:704px) {
+    .defi h1 {
+        margin: 0 50px;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+
+    section.defi {
+        height: 600px;
+    }
+
+    .defi img {
+        max-width: 30px;
+    }
+
+    .defi .paragraphe {
+        background-size: cover;
+        height: 57vw;
+    }
+
+    .defi>div {
+        width: 95%;
+        left: 12%;
+    }
+
+    section.enigme {
+        width: 80%;
+        position: relative;
+        left: 5%;
+    }
+
+    .flex-container {
+        display: block;
+    }
+
+    aside {
+        height: 40vw;
+    }
+}
+
+@media screen and (max-width:515px) {
+
+    .defi .paragraphe {
+        background-size: cover;
+        height: 77vw;
+    }
+
+    section.defi {
+        height: 600px;
+    }
+
+}
+
+@media screen and (max-width:559px) {
+
+    section.defi {
+        height: 580px;
+    }
+}

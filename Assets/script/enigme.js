@@ -25,7 +25,7 @@ const asidePara = document.createElement("p");
 aside.appendChild(asidePara);
 
 // recolte de data dans enigme json
-const urlEnigme = "./json/enigme.json";
+const urlEnigme = "../Assets/Json/enigme.json";
 fetch(urlEnigme)
   .then((reponse) => reponse.json())
   .then((dataEnigme) => populate(dataEnigme))
@@ -108,7 +108,7 @@ function populate(dataEnigme) {
             const imgFigma = document.querySelector(".figma img");
             const minuterText = document.querySelector(".minuter");
 
-            imgFigma.src = "../illustrations+Logo/Enigme/figma_logo.svg";
+            imgFigma.src = "../Assets/Images/Illustration + Logo/Page_Enigme/figma_logo.svg";
 
             let compteurRebours = setInterval(() => {
               let dateNow = new Date().getTime();

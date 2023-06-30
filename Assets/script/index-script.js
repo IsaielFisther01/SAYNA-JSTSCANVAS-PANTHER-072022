@@ -23,7 +23,7 @@ const conteneurDescr = document.getElementsByClassName("itemTxt");
 const btnSuivant = document.querySelector(".chevron");
 
 // recolte de donnee de la carrousel à partir du json
-const urlCarrousel = "./json/carrousel.json";
+const urlCarrousel = ("../Assets/Json/carrousel.json");
 fetch(urlCarrousel)
   .then((result) => result.json())
   .then((carrousel) => {
@@ -66,7 +66,7 @@ function drawCarrousel(carrousel) {
   // avec animation j+i et sans animation j+i+1
   function initialiseIllustration() {
     for (let j = 0; j < photo.length; j++) {
-      photo[j].src = `./illustrations+Logo/Accueil/Pantherhome_slider_${
+      photo[j].src = `./Assets/Images/Illustrations+Logo/Landing_page/Pantherhome_slider_${
         j + i
       }.png`;
     }
@@ -102,22 +102,22 @@ function drawCarrousel(carrousel) {
       const long = carrousel.length;
       animation();
       initialiseDescr(carrousel);
-      photo[0].src = `./illustrations+Logo/Accueil/Pantherhome_slider_${
+      photo[0].src = `./Illustrations+Logo/Accueil/Pantherhome_slider_${
         i + 1
       }.png`;
-      photo[1].src = `./illustrations+Logo/Accueil/Pantherhome_slider_${long}.png`;
-      photo[2].src = `./illustrations+Logo/Accueil/Pantherhome_slider_${1}.png`;
+      photo[1].src = `./Illustrations+Logo/Accueil/Pantherhome_slider_${long}.png`;
+      photo[2].src = `./Illustrations+Logo/Accueil/Pantherhome_slider_${1}.png`;
       i++;
     } else if (i <= carrousel.length - 1) {
       const long = carrousel.length;
       animation();
-      photo[0].src = `./illustrations+Logo/Accueil/Pantherhome_slider_${long}.png`;
+      photo[0].src = `./Illustrations+Logo/Accueil/Pantherhome_slider_${long}.png`;
       titre[0].textContent = carrousel[i].titre;
       para[0].textContent = carrousel[i].description;
-      photo[1].src = `./illustrations+Logo/Accueil/Pantherhome_slider_${1}.png`;
+      photo[1].src = `./Illustrations+Logo/Accueil/Pantherhome_slider_${1}.png`;
       titre[1].textContent = carrousel[0].titre;
       para[1].textContent = carrousel[0].description;
-      photo[2].src = `./illustrations+Logo/Accueil/Pantherhome_slider_${2}.png`;
+      photo[2].src = `./Illustrations+Logo/Accueil/Pantherhome_slider_${2}.png`;
       i++;
     } else {
       i = 0;
@@ -181,7 +181,7 @@ const canvas = document.getElementById("myCanvas");
 const ctx = canvas.getContext("2d");
 
 const img = new Image();
-img.src = "../illustrations+Logo/Accueil/logo_souris_BP2_blanc.png";
+img.src = "../Assets/Images/Illustration + Logo/logo_souris_BP2_blanc";
 
 let mouseX = 320;
 let mouseY = 80;

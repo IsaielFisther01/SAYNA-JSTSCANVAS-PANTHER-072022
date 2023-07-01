@@ -9,7 +9,7 @@ pantherPlus.addEventListener("click", function () {
 });
 
 // carrousel
-// reference de la partie photo
+//  partie photo
 const photo = document.getElementsByClassName("photo");
 // reference de la partie description
 
@@ -20,7 +20,8 @@ const para = document.getElementsByClassName("para");
 const conteneurDescr = document.getElementsByClassName("itemTxt");
 
 // bouton suivant
-const btnSuivant = document.querySelector(".chevron");
+const btnSuivant = document.querySelector("chevron");
+
 
 // recolte de donnee de la carrousel à partir du json
 const urlCarrousel = ("../Assets/Json/carrousel.json");
@@ -66,7 +67,7 @@ function drawCarrousel(carrousel) {
   // avec animation j+i et sans animation j+i+1
   function initialiseIllustration() {
     for (let j = 0; j < photo.length; j++) {
-      photo[j].src = `./Assets/Images/Illustrations+Logo/Landing_page/Pantherhome_slider_${
+      photo[j].src = `./Assets/Images/Illustrations+Logo/Landing_page/Pantherhome_slider_4${
         j + i
       }.png`;
     }
@@ -102,22 +103,22 @@ function drawCarrousel(carrousel) {
       const long = carrousel.length;
       animation();
       initialiseDescr(carrousel);
-      photo[0].src = `./Illustrations+Logo/Accueil/Pantherhome_slider_${
+      photo[0].src = `./Assets/Images/Illustrations+Logo/Landing_page/Pantherhome_slider_5${
         i + 1
       }.png`;
-      photo[1].src = `./Illustrations+Logo/Accueil/Pantherhome_slider_${long}.png`;
-      photo[2].src = `./Illustrations+Logo/Accueil/Pantherhome_slider_${1}.png`;
+      photo[1].src = `./Assets/Images/Illustrations+Logo/Landing_page/Pantherhome_slider_6${long}.png`;
+      photo[2].src = `./Assets/Images/Illustrations+Logo/Landing_page/Pantherhome_slider_7${1}.png`;
       i++;
     } else if (i <= carrousel.length - 1) {
       const long = carrousel.length;
       animation();
-      photo[0].src = `./Illustrations+Logo/Accueil/Pantherhome_slider_${long}.png`;
+      photo[0].src = `./Assets/Images/Illustrations+Logo/Landing_page/Pantherhome_slider_8${long}.png`;
       titre[0].textContent = carrousel[i].titre;
       para[0].textContent = carrousel[i].description;
-      photo[1].src = `./Illustrations+Logo/Accueil/Pantherhome_slider_${1}.png`;
+      photo[1].src = `./Assets/Images/Illustrations+Logo/Landing_page/Pantherhome_slider_9${1}.png`;
       titre[1].textContent = carrousel[0].titre;
       para[1].textContent = carrousel[0].description;
-      photo[2].src = `./Illustrations+Logo/Accueil/Pantherhome_slider_${2}.png`;
+      photo[2].src = `./Assets/Images/Illustrations+Logo/Landing_page/Pantherhome_slider_10${2}.png`;
       i++;
     } else {
       i = 0;

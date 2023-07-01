@@ -1,17 +1,13 @@
 @import 'accueil-style.css' layer(global-form);
 
 
-/* bouton nav principale */
 #btnEnigme {
     background-color: var(--dark-purple);
     border-radius: 2px;
 }
 
-/* .defi * {
-    border: solid 1px gold;
-} */
 
-/* section defi enigme */
+/*   enigme */
 section.defi {
     background: url('../Images/Illustration + Logo/3_Page_Enigme/Pantherenigme1.png') no-repeat;
     background-size: 65%;
@@ -51,7 +47,7 @@ section.defi {
 
 .defi .souris-container {
     width: 60%;
-    /* min-width: 50px; */
+  
 }
 
 .defi img {
@@ -62,7 +58,7 @@ section.defi {
     margin-left: 35%;
 }
 
-/* section questionnaire enigme */
+
 
 
 section.enigme {
@@ -78,7 +74,7 @@ section.enigme {
 
 }
 
-/* enigme à resoudre */
+
 section.enigme q {
     font-size: calc(0.8rem + 1.2vw);
     color: var(--medium-purple);
@@ -89,19 +85,19 @@ section.enigme q {
     font-family: 'Wakanda Forever', sans-serif;
 }
 
-/* suppression des crpchet d'origine */
+
 section.enigme .container-sujet q::before, section.enigme .container-sujet q::after {
     content: none;
 }
 
-/* disposition flex */
+
 .flex-container {
     display: flex;
 
 }
 
 
-/* conteneur formulaire et container-sujet */
+
 .enigme .contenant {
     flex: 1;
 }
@@ -128,20 +124,20 @@ section.enigme .container-sujet q::before, section.enigme .container-sujet q::af
     padding-top: 2vw;
 }
 
-/* rendre les element de form en bloc */
+
 .contenant .formulaire * {
     display: block;
     font-family: 'Carantall', sans-serif;
     font-size: calc(0.5rem + 0.5vw);
 }
 
-/* div champ de reponse et bouton envoyer */
+
 .contenant .formulaire form>div {
     margin-top: 10px;
     width: 85%;
 }
 
-/* champ de reponse */
+
 .enigme .formulaire textarea {
     outline: none;
     resize: none;
@@ -158,7 +154,7 @@ section.enigme .container-sujet q::before, section.enigme .container-sujet q::af
     color: var(--medium-purple)
 }
 
-/* bouton envoyer */
+
 .enigme .formulaire button {
     background-color: var(--light-purple);
     color: var(--dark-blue);
@@ -176,7 +172,7 @@ section.enigme .container-sujet q::before, section.enigme .container-sujet q::af
     box-shadow: var(--light-purple) 2px 2px 10px;
 }
 
-/* popup */
+
 
 .formulaire .overlay {
     position: fixed;
@@ -233,7 +229,7 @@ section.enigme .container-sujet q::before, section.enigme .container-sujet q::af
 
 }
 
-/* -------------PARTIE MINUTER ET FIGMA------------ */
+
 #popup-quiz .minuter-container {
     display: flex;
     justify-content: flex-end;
@@ -250,9 +246,9 @@ section.enigme .container-sujet q::before, section.enigme .container-sujet q::af
     font-weight: bold;
 }
 
-/* --------------------FIN-------------------------- */
 
-/* conteneur aside */
+
+
 .enigme aside {
     flex: 1.9;
     background: url('../Images/Illustration + Logo/3_Page_Enigme/Pantherenigme2.png') no-repeat;
@@ -270,12 +266,12 @@ section.enigme .container-sujet q::before, section.enigme .container-sujet q::af
 
 }
 
-/* -------PARTIE FLEXIBLE----------- */
+
 .enigme aside p {
     text-align: center;
 }
 
-/* ------A VIRER APARTIR DE QUESTION 2 */
+
 .enigme aside .transcrip-aside .wakanda_font {
     font-family: 'Wakanda Forever', sans-serif;
 }
@@ -295,8 +291,7 @@ section.enigme .container-sujet q::before, section.enigme .container-sujet q::af
 .enigme aside .aside-element {
     width: 50%;
     position: relative;
-    /* top: 30%; */
-    /* valeur qui diminue en fonction de la largeur de la page */
+
     top: 6vw;
     left: 20%;
 }
@@ -308,7 +303,7 @@ section.enigme .container-sujet q::before, section.enigme .container-sujet q::af
     font-style: italic;
 }
 
-/* media querries */
+
 
 @media screen and (max-width:1530px) {
     .defi h1 {

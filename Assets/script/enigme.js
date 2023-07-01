@@ -1,30 +1,30 @@
-// reference overlay backdrop
+
 const overlay = document.querySelector(".overlay");
 
-// reference formulaire et popup
+// formulaire et popup
 const btnConfirm = document.getElementById("btnConfirm");
 const btnPopupQuiz = document.getElementById("btn-popup");
 const textReponse = document.getElementById("reponse");
 const popupTitre = document.querySelector(".popup-titre");
 const popupText = document.querySelector(".popup-text");
 
-// reference validator
+
 const validator = document.querySelector(".validator");
 
-// compteur question
+
 const compteurQuiz = document.querySelector(".compteur");
 
-// reference sujet question
+
 const paraSujet = document.getElementsByClassName("para");
 const aside = document.querySelector(".aside-element");
 
-// creation des element aside
+
 const asideTitre = document.createElement("h3");
 aside.appendChild(asideTitre);
 const asidePara = document.createElement("p");
 aside.appendChild(asidePara);
 
-// recolte de data dans enigme json
+// recolte des données dans enigme json
 const urlEnigme = "../Assets/Json/enigme.json";
 fetch(urlEnigme)
   .then((reponse) => reponse.json())
@@ -37,7 +37,6 @@ let i = 0;
 compteurQuiz.textContent = i + 1;
 
 function populate(dataEnigme) {
-  //----DEFINITION DES FOCTIONS UTILES---------
   function afficheTrue() {
     popupTitre.textContent = `BRAVO!!`;
     popupText.textContent = `Tu as trouvé la réponse.Es tu prêt pour l'énigme suivante ?`;
@@ -58,9 +57,7 @@ function populate(dataEnigme) {
       overlay.style.display = "none";
     });
   }
-  //   ---------------------------------------------
-
-  // ----------DEBUT EVENEMENT ----------------------
+  
   btnConfirm.addEventListener("click", function (evt) {
     evt.preventDefault();
     if (textReponse.value === "") {
@@ -100,11 +97,10 @@ function populate(dataEnigme) {
             btnPopupQuiz.textContent = `REVENIR A L'ECRAN D'ACCUEIL`;
             textReponse.value = "";
 
-            // ---------PARTIE COMPTE À REBOURS ----------------
-            // definition des dates
+            // Les dates
             const dateFuture = new Date("2023-06-30 23:59:59").getTime();
 
-            // definition des references sur html
+            //  les references sur html
             const imgFigma = document.querySelector(".figma img");
             const minuterText = document.querySelector(".minuter");
 
@@ -113,7 +109,7 @@ function populate(dataEnigme) {
             let compteurRebours = setInterval(() => {
               let dateNow = new Date().getTime();
               let difference = dateFuture - dateNow;
-              // definition des variable jour heure minute seconde
+              // les variables jours / heures / minutes / secondes
               let j = Math.floor(difference / (1000 * 60 * 60 * 24));
               let h = Math.floor(
                 (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
@@ -122,7 +118,7 @@ function populate(dataEnigme) {
                 (difference % (1000 * 60 * 60)) / (1000 * 60)
               );
               let sec = Math.floor((difference % (1000 * 60)) / 1000);
-              // formatage de nombre en unité
+              //
               j = j < 10 ? "0" + j : j;
               h = h < 10 ? "0" + h : h;
               min = min < 10 ? "0" + min : min;
@@ -134,7 +130,7 @@ function populate(dataEnigme) {
                 minuterText.innerHTML = `C'est l'heure!!`;
               }
             }, 1000);
-            // -----------------FIN PARTIE COMPTE A REBOURS---------------
+            // -----------------FIN ---------------
 
             overlay.style.display = "block";
             btnPopupQuiz.addEventListener("click", function () {
